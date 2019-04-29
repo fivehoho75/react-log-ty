@@ -1,0 +1,13 @@
+body > div,
+body > div > div,
+.login-form {
+  height: 100%;
+}
+
+.select-button {
+  padding-bottom: 5px;
+}
+
+.fix-left {
+  text-align: left !important;
+}
