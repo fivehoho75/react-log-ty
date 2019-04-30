@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './home.scss';
 import { Button, Form, Grid, Header, Segment, Divider } from 'semantic-ui-react'
 import SocialButton from 'components/SocialButton';
+import BaseImage from 'static/images/base3.jpg';
 
 type Props = {
 };
@@ -10,9 +11,9 @@ export default class Home extends Component<Props> {
 
   render() {
     return (
-      <div className='login-form'>
+      <div>
         <Grid textAlign='center' className='login-form' verticalAlign='middle'>
-          <Grid.Column style={{ maxWidth: 450 }}>
+          <Grid.Column className='size'>
             <Segment raised>
               <Header as='h2' textAlign='center'>
                 이야기를 시작하기
@@ -30,6 +31,9 @@ export default class Home extends Component<Props> {
             </Segment>
           </Grid.Column>
         </Grid>
+        <div className='bg'>
+          <img src={BaseImage} />
+        </div>
       </div>
     )
   }
