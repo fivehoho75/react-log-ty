@@ -1,0 +1,9 @@
+@import '~open-color/open-color';
+
+@mixin hover() {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

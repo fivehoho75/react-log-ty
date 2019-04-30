@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import './home.css';
-import { Button, Form, Grid, Header, Segment, Icon, Divider, Container } from 'semantic-ui-react'
+import './home.scss';
+import { Button, Form, Grid, Header, Segment, Divider } from 'semantic-ui-react'
+import SocialButton from 'components/SocialButton';
 
 type Props = {
 };
 
 export default class Home extends Component<Props> {
-  constructor(props: Props) {
-    super(props);
-  }
 
   render() {
     return (
@@ -25,15 +23,9 @@ export default class Home extends Component<Props> {
                     <Button color='orange'>시작하기</Button>
                   </Form.Input>
                   <Divider horizontal>Or</Divider>
-                  <Container className="select-button">
-                    <Button className="fix-left" color='google plus' fluid><Icon name='google' /> Google 로그인</Button>
-                  </Container>
-                  <Container className="select-button">
-                    <Button className="fix-left" color='facebook' fluid><Icon name='facebook' /> Facebook 로그인</Button>
-                  </Container>
-                  <Container className="select-button">
-                    <Button className="fix-left" color='black' fluid><Icon name='github' /> Github 로그인</Button>
-                  </Container>
+                  <SocialButton type='google' />
+                  <SocialButton type='facebook' />
+                  <SocialButton type='github' />
                 </Segment>
             </Segment>
           </Grid.Column>
